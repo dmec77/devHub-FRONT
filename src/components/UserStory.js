@@ -15,4 +15,15 @@ class UserStory extends Component {
       }
   }
 
+  render() {
+    return (
+        <div className="row margin-top-20">
+            <div className="col-sm-3">
+                <img src={this.state.userstory}  className="img-responsive" />
+            </div>
+        </div>
+        );
+    }
+  }
+
 export default UserStory;

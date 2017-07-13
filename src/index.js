@@ -31,7 +31,7 @@ import Proposal from "./components/Proposal";
 import Issues from "./components/Features";
 import bonus from "./components/Bonus";
 import Technologies from "./components/Technologies";
-import Issues from "./components/Issues";
+
 
 
 
@@ -52,15 +52,16 @@ ReactDom.render(
        <Route path="/users/login" component={Login} />
        <Route path="/signup" component={Signup} />
        <Route path="/users" component={User} onEnter={restrict} />
-       <Route path="/users/:id/dashboard" component={UserDashboard} onEnter={restrict} />
-       <Route path="/users/:id/projectname" component={ProjectName} onEnter={restrict} />
-       <Route path="/users/:id/proposal" component={Proposal} onEnter={restrict} />
-       <Route path="/users/:id/wireframes" component={Wireframes} onEnter={restrict} />
-       <Route path="/users/:id/erd" component={Erd} onEnter={restrict} />
-       <Route path="/users/:id/userstories" component={UserStories} onEnter={restrict} />
-       <Route path="/users/:id/features" component={Features} onEnter={restrict} />
-       <Route path="/users/:id/bonus" component={Bonus} onEnter={restrict} />
-       <Route path="/users/:id/technologies" component={Technologies} onEnter={restrict} />
-       <Route path="/users/:id/issues" component={Issues} onEnter={restrict} />
+       <Route path="/users/:id/userdashboard" component={UserDashboard} onEnter={restrict} />
+       <Route path="/users/:id/projectdashboard" component={UserDashboard} onEnter={restrict} />
+       <Route path="/users/:id/projectdashboard/projectname" component={ProjectName} onEnter={restrict} />
+       <Route path="/users/:id/projectdashboard/proposal" component={Proposal} onEnter={restrict} />
+       <Route path="/users/:id/projectdashboard/wireframes" component={Wireframes} onEnter={restrict} />
+       <Route path="/users/:id/projectdashboard/erd" component={Erd} onEnter={restrict} />
+       <Route path="/users/:id/projectdashboard/userstories" component={UserStories} onEnter={restrict} />
+       <Route path="/users/:id/projectdashboard/features" component={Features} onEnter={restrict} />
+       <Route path="/users/:id/projectdashboard/bonus" component={Bonus} onEnter={restrict} />
+       <Route path="/users/:id/projectdashboard/technologies" component={Technologies} onEnter={restrict} />
+       <Route path="/users/:id/projectdashboard/issues" component={Issues} onEnter={restrict} />
    </Router>
 , document.getElementById("app"));
