@@ -4,8 +4,8 @@
 
 import React, { Component } from "react";
 
-import LoggedInNav from "./LoggedInNav";
-import GuestNav from "./GuestNav";
+// import LoggedInNav from "./LoggedInNav";
+// import GuestNav from "./GuestNav";
 
 class Nav extends Component {
     constructor(props) {
@@ -15,13 +15,9 @@ class Nav extends Component {
     render() {
         if (window.localStorage.getItem("token")) {
             return (
-                <LoggedInNav />
+                <UserDashboard />
             );
-        } else {
-            return (
-                <GuestNav />
-            );
-        }
+        } 
     }
 }
 

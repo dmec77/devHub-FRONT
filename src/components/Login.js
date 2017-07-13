@@ -18,7 +18,7 @@ class Login extends Component {
       event.preventDefault();
 
       axios
-      .post("http://pet-manager-api.herokuapp.com/users/login", {
+      .post("http://devHub.herokuapp.com/users/login", {
           user: this.state
       })
       .then((response) => {
@@ -26,7 +26,10 @@ class Login extends Component {
 
           window.localStorage.setItem("token", token);
 
-          browserHistory.push("/");
+//  WHICH ONE CORRECT?????
+          browserHistory.push("/users/:id/dashboard");
+          // browserHistory.push(`/users/${this.props.params.id}/dashboard`);
+          response.user
       })
       .catch((err) => {
           console.log(err);
@@ -42,7 +45,8 @@ class Login extends Component {
   render() {
       return (
           <div>
-              <Nav />
+
+            <Nav />
 
               <div className="small-container well">
                   <form onSubmit={this.handleSubmit.bind(this)}>
@@ -65,7 +69,7 @@ class Login extends Component {
                       </div>
                   </form>
               </div>
-          </div>
+
       );
   }
 }

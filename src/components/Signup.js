@@ -20,7 +20,7 @@ class Signup extends Component {
         event.preventDefault();
 
         axios
-        .post("http://pet-manager-api.herokuapp.com/users", {
+        .post("http://devHub.herokuapp.com/users", {
             user: this.state
         })
         .then((user) => {
@@ -48,11 +48,11 @@ class Signup extends Component {
                         <h2>Create Account</h2>
 
                         <div className="margin-top-20">
-                            <input onChange={this.handleChange.bind(this)} name="first_name" type="text" className="form-control" placeholder="First Name" />
+                            <input onChange={this.handleChange.bind(this)} name="first" type="text" className="form-control" placeholder="First Name" />
                         </div>
 
                         <div className="margin-top-20">
-                            <input onChange={this.handleChange.bind(this)} name="last_name" type="text" className="form-control" placeholder="Last Name" />
+                            <input onChange={this.handleChange.bind(this)} name="last" type="text" className="form-control" placeholder="Last Name" />
                         </div>
 
                         <div className="margin-top-20">
@@ -75,6 +75,7 @@ class Signup extends Component {
             </div>
         );
     }
+  }
 }
 
 export default Signup;

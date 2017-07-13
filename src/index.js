@@ -7,16 +7,35 @@ import { Route, Router, browserHistory } from "react-router";
 import "./assets/css/style.css";
 
 //Vendor assets
-import "./vendor/css/bootstrap.css";
-import "./vendor/css/font-awesome.min.css";
+// import "./vendor/css/bootstrap.css";
+// import "./vendor/css/font-awesome.min.css";
+
+
+// STATE Comp
+import Landing from "./components/Landing";
+// Landing-PROP Comp
+import Login from "./components/Login";
+// Landing-PROP Comp
+import Signup from "./components/Signup";
 
 import User from "./components/User";
-// import NewOwner from "./components/NewOwner";
-// import NewPet from "./components/NewPet";
-// import EditOwner from "./components/EditOwner";
-// import EditPet from "./components/EditPet";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+import UserDashboard from "./components/UserDashboard";
+
+import ProjectDashboard from "./components/ProjectDashboard";
+
+import ProjectName from "./components/ProjectName";
+import Wireframes from "./components/Wireframes";
+import UserStories from "./components/UserStories";
+import Erd from "./components/Erd";
+import Proposal from "./components/Proposal";
+import Issues from "./components/Features";
+import bonus from "./components/Bonus";
+import Technologies from "./components/Technologies";
+import Issues from "./components/Issues";
+
+
+
+
 
 //Restrict routes to logged in users only
 const restrict = () => {
@@ -29,12 +48,19 @@ const restrict = () => {
 // if you put "exact" between Route and Path below, then you are telling the app to only work on the EXACT match (i.e. if /owners/1 ws listed with EXACT, then /owners/2 will not match)
 ReactDom.render(
     <Router history={browserHistory}>
-//         <Route path="/" component={User} onEnter={restrict} />
-//         <Route path="/owners/new" component={NewOwner} onEnter={restrict} />
-//         <Route path="/owners/:owner_id/pets/new" component={NewPet} onEnter={restrict} />
-//         <Route path="/owners/:id/edit" component={EditOwner} onEnter={restrict} />
-//         <Route path="/owners/:owner_id/pets/:id/edit" component={EditPet} onEnter={restrict} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
-//     </Router>
+       <Route path="/" component={Landing} onEnter={restrict} />
+       <Route path="/users/login" component={Login} />
+       <Route path="/signup" component={Signup} />
+       <Route path="/users" component={User} onEnter={restrict} />
+       <Route path="/users/:id/dashboard" component={UserDashboard} onEnter={restrict} />
+       <Route path="/users/:id/projectname" component={ProjectName} onEnter={restrict} />
+       <Route path="/users/:id/proposal" component={Proposal} onEnter={restrict} />
+       <Route path="/users/:id/wireframes" component={Wireframes} onEnter={restrict} />
+       <Route path="/users/:id/erd" component={Erd} onEnter={restrict} />
+       <Route path="/users/:id/userstories" component={UserStories} onEnter={restrict} />
+       <Route path="/users/:id/features" component={Features} onEnter={restrict} />
+       <Route path="/users/:id/bonus" component={Bonus} onEnter={restrict} />
+       <Route path="/users/:id/technologies" component={Technologies} onEnter={restrict} />
+       <Route path="/users/:id/issues" component={Issues} onEnter={restrict} />
+   </Router>
 , document.getElementById("app"));
