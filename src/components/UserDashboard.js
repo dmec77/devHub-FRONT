@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { browserHistory, Link } from "react-router";
-import axios from "axios";
+import axios from "react-axios";
 
 import Nav from "./Nav";
 
@@ -10,12 +10,42 @@ class UserDashboard extends Component {
       super(props);
 
       this.state = {
-          // email: "",
-          // password: ""
-      }
+          first: " ",
+          last: " ",
+          email: " ",
+          project_name: " "
+
+      };
   }
 
+    componentDidMount() {
+      axios
+      .get("https:localhost:8000", {
+          headers: {
+              "Authorization": window.localStorage.getItem("token")
+          }
+      })
 
+      .then((response) => {
+      const usersData = response.data;
 
+        this.setState({
+          users: usersData
+        });
+    })
+
+      .catch((err) => {
+      console.log(err);
+    });
+  }
+
+  render() {
+    return (
+        <div>
+          SOME DATA GOES HERE
+        </div>
+
+    );
+  }
 }
 export default UserDashboard;

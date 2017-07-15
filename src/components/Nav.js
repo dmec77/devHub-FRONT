@@ -3,6 +3,7 @@
 //Step 3: Insert Nav component into Dashboard component
 
 import React, { Component } from "react";
+import UserDashboard from "./UserDashboard";
 
 // import LoggedInNav from "./LoggedInNav";
 // import GuestNav from "./GuestNav";
@@ -17,7 +18,7 @@ class Nav extends Component {
             return (
                 <UserDashboard />
             );
-        } 
+        }
     }
 }
 

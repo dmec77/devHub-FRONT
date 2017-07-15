@@ -16,7 +16,7 @@ class Landing extends Component {
 
               <Link to="/signup" id="sign-up">Sign Up </Link>
 
-              <span id="title">      </span>
+              <span className="title"></span>
 
 
               <h1>Everything you need, All in one place</h1>

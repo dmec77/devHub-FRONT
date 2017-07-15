@@ -18,4 +18,4 @@
 
 
 should the whole Proj dash be the parent with a ll the others being the child
- For any field that is just going to llow data to be entered, is that a dumb Child comp
+ For any field that is just going to allow data to be entered, is that a dumb Child comp
