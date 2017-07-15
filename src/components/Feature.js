@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { browserHistory, Link } from "react-router";
-import axios from "axios";
+// import axios from "axios";
 import {Bootstrap, Grid, Row, Col} from 'react-bootstrap';
 
 import Nav from "./Nav";
 
-// class NameForm extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {value: ''};
+constructor(props) {
+  super(props);
+  this.state = {
+
+      features: ''
+};
 
 
 handleChange(event) {

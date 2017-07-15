@@ -20,7 +20,7 @@ class Signup extends Component {
         event.preventDefault();
 
         axios
-        .post("http://devHub.herokuapp.com/users", {
+        .post(localhost:8000"), {
             user: this.state
         })
         .then((user) => {

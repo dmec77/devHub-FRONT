@@ -4,6 +4,8 @@ import axios from "axios";
 
 import Nav from "./Nav";
 
+// FIGURE OUT THIS TOKEN STUFF
+
 class Login extends Component {
   constructor(props) {
       super(props);

@@ -1,20 +1,24 @@
 import React, { Component } from "react";
 import { browserHistory, Link } from "react-router";
-import axios from "axios";
+// import axios from "axios";
 import {Bootstrap, Grid, Row, Col} from 'react-bootstrap';
 
 import Nav from "./Nav";
 
 
-// class NameForm extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {value: ''};
+class Bonus extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+        bonus: ''
+};
 
 
 handleChange(event) {
   this.setState({value: event.target.value});
 }
+
 
 handleSubmit(event) {
   alert('A name was submitted: ' + this.state.value);

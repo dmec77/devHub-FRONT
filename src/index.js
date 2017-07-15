@@ -5,6 +5,8 @@ import { Route, Router, browserHistory } from "react-router";
 
 //Application assets
 import "./assets/css/style.css";
+import "./assets/js/app.js";
+// import "./assets/img/style.css";
 
 //Vendor assets
 // import "./vendor/css/bootstrap.css";
